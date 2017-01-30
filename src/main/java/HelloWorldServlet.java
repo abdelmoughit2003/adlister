@@ -8,7 +8,6 @@ import javax.servlet.*;
 
 
 
-
 @WebServlet(name = "HelloServlet", urlPatterns = "/hello")
 public class HelloWorldServlet extends HttpServlet {
     private int counter=0;
