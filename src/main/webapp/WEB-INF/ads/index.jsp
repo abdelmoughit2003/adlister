@@ -29,10 +29,10 @@
         <td class ="color">Description</td>
         <c:forEach  var="ads" items="${ads}">
             <tr>
-                <td>${ads.id}</td>
-                <td>${ads.userId}</td>
-                <td>${ads.title}</td>
-                <td>${ads.description}</td>
+                <td><c:out value="${ads.id}"/></td>
+                <td><c:out value="${ads.userId}"/></td>
+                <td><c:out value="${ads.title}"/></td>
+                <td><c:out value="${ads.description}"/></td>
             </tr>
         </c:forEach>
         </thead>
