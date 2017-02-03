@@ -1,9 +1,21 @@
+DROP DATABASE IF EXISTS adlister_db;
 CREATE DATABASE IF NOT EXISTS adlister_db;
-use adlister_db;
-CREATE TABLE IF NOT EXISTS ads(
 
-  id int UNSIGNED not NULL AUTO_INCREMENT,
-  title VARCHAR(400) not null,
-  description text,
+USE adlister_db;
+
+CREATE TABLE users (
+  id       INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  username VARCHAR(100) NOT NULL,
+  password VARCHAR(100) NOT NULL,
+  email    VARCHAR(100) NOT NULL,
   PRIMARY KEY (id)
+);
+
+CREATE TABLE IF NOT EXISTS ads (
+  id          INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  user_id     INT UNSIGNED NOT NULL,
+  title       VARCHAR(400) NOT NULL,
+  description TEXT,
+  PRIMARY KEY (id),
+  FOREIGN KEY (user_id) REFERENCES users (id)
 );
