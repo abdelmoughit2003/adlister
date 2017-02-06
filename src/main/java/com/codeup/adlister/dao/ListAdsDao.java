@@ -26,6 +26,10 @@ public class ListAdsDao implements Ads {
         ads.add(ad);
         return ad.getId();
     }
+    @Override
+    public String getEmail(Ad ad) {
+        return "Test email";
+    }
 
     private List<Ad> generateAds() {
         List<Ad> ads = new ArrayList<>();
