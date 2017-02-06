@@ -14,9 +14,9 @@
 
     <c:forEach var="ad" items="${ads}">
         <div class="col-md-6">
-            <h2>${ad.getTitle()}</h2>
-            <p>${ad.getDescription()}</p>
-
+            <h2><c:out value="${ad.getTitle()}"/></h2>
+            <p><c:out value="${ad.getDescription()}"/></p>
+            <p>Posted by: ${adsDao.getEmail(ad)}</p>
         </div>
     </c:forEach>
 </div>
